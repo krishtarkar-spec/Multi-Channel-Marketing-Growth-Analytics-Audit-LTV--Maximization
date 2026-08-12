@@ -42,14 +42,15 @@ Built an executive-level dashboard using a **Star Schema** with DAX-powered fina
 
 ---
 
-## 📊 Key Results & Impact
+📊 Key Results & Impact
 
 | Metric | Result |
 |---|---|
-| **Refund Leakage Identified** | **$15.8M** in operational leakage driven primarily by high-value Electronics |
-| **Profit Recovery Projected** | **$3.8M** annual recovery modeled via a 25% prescriptive leakage reduction |
-| **Retention Mapped** | **24-month** cohort decay analysis across 100,000 unique customers |
-| **Critical Churn Point** | **77% decay** at Month 1 — identifying the highest-leverage re-engagement window |
+| Refund Leakage Identified | $15.8M in operational leakage driven primarily by high-value Electronics |
+| Profit Recovery Projected | $3.8M annual recovery modeled via a 25% prescriptive leakage reduction |
+| Retention Mapped | 24-month cohort decay analysis across 100,000 unique customers |
+| Critical Churn Point | 77% decay at Month 1 — identifying the highest-leverage re-engagement window |
+| High-LTV Segment Value | Platinum Whale cohort drove $74.9M in net revenue at a 93.6% profit margin |
 
 ---
 
