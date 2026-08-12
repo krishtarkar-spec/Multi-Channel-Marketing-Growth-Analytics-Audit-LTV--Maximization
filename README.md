@@ -51,33 +51,4 @@ Step 1: Environment Setup
 
 git clone <your-repo-url>
 cd marketing-analytics-audit
-pip install pandas numpy
-Step 2: Generate the Data Environment
-
-# Generate the full 1.1M row relational dataset
-python "Synthetic Data.py"
-Step 3: Database & Visualization
-
-# Execute schema and import scripts in your PostgreSQL instance
-psql -U <user> -d <database> -f schema.sql
-
-# Run workstreams in sequence
-psql -U <user> -d <database> -f Workstream_A_Master.sql
-psql -U <user> -d <database> -f Workstream_B_Segmentation.sql
-psql -U <user> -d <database> -f Workstream_C_Recovery.sql
-psql -U <user> -d <database> -f Workstream_D_CrossSell.sql
-psql -U <user> -d <database> -f Workstream_E_Refunds.sql
-
-# Open Dashboard/*.pbix in Power BI Desktop and refresh the data source
-📂 Repository Structure
-├── Synthetic Data.py              # Data simulation engine (1.1M records, 3-table schema)
-├── Workstream_A_Master.sql        # Net Profit & Channel ROI across 1.1M rows
-├── Workstream_B_Segmentation.sql  # Platinum Whales / Steady Growers / Margin Drainers
-├── Workstream_C_Recovery.sql      # $3.8M prescriptive profit recovery model
-├── Workstream_D_CrossSell.sql     # Sequence-based cross-sell transition matrix
-├── Workstream_E_Refunds.sql       # Refund trigger audit by product & price sensitivity
-├── Aggregated_Cohort_Decay.sql    # 24-month retention heatmap (FIRST_VALUE window fn)
-├── Datasets/                      # Generated CSVs (dim_users, fact_transactions, spend)
-└── Dashboard/                     # Power BI .pbix executive dashboard
-🧰 Tech Stack
-Python PostgreSQL Power BI Pandas NumPy
+pip install
