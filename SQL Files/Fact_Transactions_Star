@@ -1,0 +1,19 @@
+-- FACT TRANSACTIONS STAR: transaction-grain table for the reporting layer
+SET temp_tablespaces = 'd_drive_temp';
+
+DROP TABLE IF EXISTS fact_transactions_star;
+
+CREATE TABLE fact_transactions_star AS
+SELECT
+    t.user_id,
+    t.order_date,
+    t.is_refunded,
+    t.category,
+    REPLACE(REPLACE(t.order_value,   '$ ', ''), ',', '')::NUMERIC(12,2) AS order_value,
+    REPLACE(REPLACE(t.unit_cost,     '$ ', ''), ',', '')::NUMERIC(12,2) AS unit_cost,
+    REPLACE(REPLACE(t.shipping_cost, '$ ', ''), ',', '')::NUMERIC(12,2) AS shipping_cost,
+    u.campaign_id,
+    u.region,
+    u.utm_source AS channel
+FROM fact_transactions t
+JOIN dim_users u ON u.user_id = t.user_id;
